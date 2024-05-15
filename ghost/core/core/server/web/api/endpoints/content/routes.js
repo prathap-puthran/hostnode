@@ -11,6 +11,10 @@ const config = require('../../../../../shared/config');
 module.exports = function apiRoutes() {
     const router = express.Router('content api');
 
+    router.get('/cposts',(req,res) => {
+        res.send('it works');
+    });
+
     router.use(cors({maxAge: config.get('caching:cors:maxAge')}));
 
     // ## Posts
